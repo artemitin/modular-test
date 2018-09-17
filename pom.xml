@@ -19,6 +19,7 @@
         <module>axonize</module>
         <module>cumulocity</module>
         <module>sdk-main</module>
+        <module>sdk-components</module>
     </modules>
 
 

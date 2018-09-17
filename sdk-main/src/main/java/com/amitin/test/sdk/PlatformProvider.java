@@ -9,17 +9,17 @@ import java.util.ServiceLoader;
  * @author Artem Mitin
  * @since 13.09.2018
  */
-public class GreetingsProvider {
-    private static GreetingsProvider provider;
+public class PlatformProvider {
+    private static PlatformProvider provider;
     private ServiceLoader<AdapterApi> loader;
 
-    private GreetingsProvider() {
+    private PlatformProvider() {
         loader = ServiceLoader.load(AdapterApi.class);
     }
 
-    public static GreetingsProvider getInstance() {
+    public static PlatformProvider getInstance() {
         if (provider == null) {
-            provider = new GreetingsProvider();
+            provider = new PlatformProvider();
         }
         return provider;
     }
@@ -30,7 +30,7 @@ public class GreetingsProvider {
             return adapter;
         } else {
             throw new NoSuchElementException(
-                    "No implementation for GreetingsProvider");
+                    "No implementation for PlatformProvider");
         }
     }
 }
