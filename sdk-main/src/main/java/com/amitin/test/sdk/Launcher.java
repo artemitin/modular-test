@@ -9,7 +9,7 @@ import com.amitin.test.api.AdapterApi;
 public class Launcher {
 
     public static void main(String... args) {
-        AdapterApi adapter = PlatformProvider.getInstance().serviceImpl();
+        AdapterApi adapter = AdaptersProvider.getInstance().serviceImpl();
         adapter.sayHello("Artem");
     }
 }
